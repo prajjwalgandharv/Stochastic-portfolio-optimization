@@ -21,17 +21,11 @@ Data: Daily adjusted close prices → converted to daily returns
 
 Libraries: JuMP, HiGHS, MathOptInterface, DataFrames.
 Steps:
-
 a) Compute exponentially weighted mean vector (μ) and covariance matrix (Σ).
-
 b) Run stochastic daily-path simulations (~2000 scenarios per rebalance).
-
 c) Optimize portfolio weights using CVaR at 95% confidence.
-
 d) Apply diversification constraints: max 20% per stock, no shorting.
-
 e) Deduct execution + turnover costs from portfolio value.
-
 f) Rebalance on fixed dates (quarterly or monthly).
 
 Outputs:
@@ -42,25 +36,15 @@ Daily wealth path (portfolio_daily.csv).
 Scenario quantiles for visualization (graph.csv)
 
 3. Post-Optimization Analysis (Python)
-
 Benchmarks: S&P 500, NASDAQ Composite, Dow Jones Industrial Average
 
 Plots:
 Normalized Wealth vs Benchmarks.
-
 Charts (1σ, 2σ, 3σ) showing stochastic forecast envelopes per rebalance.
-
 Rebased indices: index returns rescaled to portfolio at each rebalance for clearer comparison.
 
 Performance metrics:
-
-Sharpe ratio
-
-Sortino ratio
-
-Maximum Drawdown (MaxDD)
-
-Cumulative return
+Sharpe ratio, Sortino ratio, Maximum Drawdown (MaxDD), Cumulative return
 
 Results
 
@@ -69,30 +53,19 @@ CVaR optimization prevents extreme downside losses better than mean-variance.
 Simulation charts show uncertainty widening over horizons, with realized returns typically staying within 1–2σ bands.
 Compared to SPY/QQQ/DIA, the portfolio demonstrates comparable or stronger risk-adjusted returns, though subject to shocks (e.g., tariffs, macro volatility).
 
-How to Run_:
+How to Run:
 
-Prepare Data (Python)
-
-jupyter notebook data_preparation.ipynb
-
+Prepare Data (Python)- jupyter notebook data_preparation.ipynb
 Generates returns.csv, prices.csv, tickers.csv.
 
-Optimize (Julia)
-
-jupyter notebook stochastic_optimization.ipynb
-
+Optimize (Julia)- jupyter notebook stochastic_optimization.ipynb
 Produces rebalance weights, portfolio values, and simulation data.
 
-Analyze (Python)
-
-jupyter notebook post_optimization_analysis.ipynb
-
+Analyze (Python)- jupyter notebook post_optimization_analysis.ipynb
 Creates plots, calculates performance metrics.
 
 Tech Stack
 
 Python: pandas, numpy, matplotlib, seaborn, yfinance
-
 Julia: JuMP, HiGHS, MathOptInterface, DataFrames, LinearAlgebra
-
 Visualization: Fan charts, benchmark overlays
