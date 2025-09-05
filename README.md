@@ -17,7 +17,7 @@ Sample: 50 equities (e.g., AAPL, MSFT, NVDA, BRK-B, TSLA, FSLR, PLTR, etc.).
 Start date: April 1, 2024 (quarter lookback before first allocation).
 Data: Daily adjusted close prices → converted to daily returns
 
-2. Optimization (Julia)
+2. Optimization (Julia)- Julia was chosen for optimization because of its specialized libraries and ecosystem.
 
 Libraries: JuMP, HiGHS, MathOptInterface, DataFrames.
 Steps:
