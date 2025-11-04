@@ -64,7 +64,7 @@ Produces rebalance weights, portfolio values, and simulation data.
 Analyze (Python)- jupyter notebook post_optimization_analysis.ipynb
 Creates plots, calculates performance metrics.
 
-# Tech Stack
+# Technology used
 
 Python: pandas, numpy, matplotlib, yfinance
 Julia: JuMP, HiGHS, MathOptInterface, DataFrames, LinearAlgebra
