@@ -1,5 +1,5 @@
 # Stochastic-portfolio-optimization
-This project was developed as part of a self-directed internship in quantitative finance and data science, showcasing applied portfolio optimization techniques with industry relevance.
+This project was developed as part of a self-directed internship in quantitative finance and data science, demonstrating applied portfolio optimization techniques with industry relevance.
 
 # Project Overview
 
@@ -48,7 +48,7 @@ Sharpe ratio, Sortino ratio, Maximum Drawdown (MaxDD), Cumulative return
 
 # Results
 
-The portfolio dynamically reallocates across sectors (tech, banks, green energy) depending on risk-return tradeoffs.
+The portfolio reallocates across sectors (tech, banks, green energy) depending on risk-return tradeoffs.
 CVaR optimization prevents extreme downside losses better than mean-variance.
 Simulation charts show uncertainty widening over horizons, with realized returns typically staying within 1–2σ bands.
 Compared to SPY/QQQ/DIA, the portfolio demonstrates comparable or stronger risk-adjusted returns, though subject to shocks (e.g., tariffs, macro volatility).
